@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pureone doc site</title>
+    <link>/pure-doc/</link>
+    <description>Recent content on pureone doc site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2019 Notepadium.</copyright>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/pure-doc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/pure-doc/about/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/about/</guid>
+      <description>TODO</description>
+      
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>/pure-doc/post/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
