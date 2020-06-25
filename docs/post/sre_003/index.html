@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>SRE&nbsp;&ndash;&nbsp;pureone doc site</title><link rel="stylesheet" href="/pure-doc/css/core.min.25936def6c216395022d039c1109da843822f2c0aa2dbf735136c58cf2fa166ba4b44cf11d57f01bbf191751cd9bf282.css" integrity="sha384-JZNt72whY5UCLQOcEQnahDgi8sCqLb9zUTbFjPL6FmuktEzxHVfwG78ZF1HNm/KC"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SRE" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/pure-doc/"><span class="site name">pureone doc site</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/pure-doc/categories/">Categories</a><a class="nav item" href="/pure-doc/tags/">Tags</a><a class="nav item" href="/pure-doc/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">100% JavaScript-free</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">SRE</h1><p class="article date">Thursday, July 9, 2020</p></section><article class="article markdown-body"><h2 id="sre">SRE</h2>
+<blockquote>
+<p>Site Reliability Engineering</p>
+</blockquote>
+<ul>
+<li>SREはエンジニアであり、システムの信頼性に焦点を置く。</li>
+<li>SREとは、ソフトウェアエンジニアチームに運用チームの設計を依頼したときに出来上がるもの</li>
+</ul>
+<blockquote>
+<p>なぜ DevOpsではなないのか</p>
+</blockquote>
+<ul>
+<li>Dev/Opsに分ける &gt; 2つのチームの目的を分ける &gt; 新規開発 x 安定稼働 &gt; 対立構造な組織</li>
+</ul>
+<blockquote>
+<p>組織</p>
+</blockquote>
+<ul>
+<li>ソフトウェアエンジニアとUnixシステムの内部とネットワーキングに関するスペシャリスト(1:1)</li>
+<li>運用の負荷を開発チームへ</li>
+</ul>
+<blockquote>
+<p>エラーバジェットの導入によって対立構造を解決する</p>
+</blockquote>
+<ul>
+<li>SREの目標は、障害ゼロではなく、エラーバジェットを消費すること。</li>
+<li>SREとDEVは機能のリリース速度を最大化するためにエラーバジェットを使う。</li>
+<li>障害の発生を恐れるのではなく、コントロールする。</li>
+</ul>
+<blockquote>
+<p>信頼性</p>
+</blockquote>
+<ul>
+<li>平均故障時間(MTTF = mean time to failure), 平均修復時間(mean time to repair MTTR)との関数
+<ul>
+<li>人間が介入することでレイテンシが生じる（障害の発生頻度よりもシステム化/手順化しておくことで3倍の効果</li>
+</ul>
+</li>
+</ul>
+<h2 id="memo">Memo</h2>
+<ul>
+<li>ユーザが満足する可用性のレベルはどの程度か。満足できなかった代替策はあるのか。</li>
+<li>漸進的なロールアウト：徐々に、新規の運用を開始する。</li>
+<li>リソース確保までのリードタイムを踏まえておく必要がある。</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/pure-doc/categories/sre/>SRE</a><a class="tag" href=/pure-doc/tags/sre/>SRE</a><a class="tag" href=/pure-doc/tags/monitoring/>monitoring</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/pure-doc/post/gcp_001/"><span class="iconfont icon-article"></span>DDD</a></p><p><a class="link" href="/pure-doc/post/cp_001/"><span class="iconfont icon-article"></span>Computer Basics</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2019 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>

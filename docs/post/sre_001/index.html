@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>入門監視&nbsp;&ndash;&nbsp;pureone doc site</title><link rel="stylesheet" href="/pure-doc/css/core.min.25936def6c216395022d039c1109da843822f2c0aa2dbf735136c58cf2fa166ba4b44cf11d57f01bbf191751cd9bf282.css" integrity="sha384-JZNt72whY5UCLQOcEQnahDgi8sCqLb9zUTbFjPL6FmuktEzxHVfwG78ZF1HNm/KC"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="入門監視" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/pure-doc/"><span class="site name">pureone doc site</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/pure-doc/categories/">Categories</a><a class="nav item" href="/pure-doc/tags/">Tags</a><a class="nav item" href="/pure-doc/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">100% JavaScript-free</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">入門監視</h1><p class="article date">Monday, June 29, 2020</p></section><article class="article markdown-body"><blockquote>
+<p><em>監視とは、あるシステムやそのシステムのコンポーネントの振る舞いや出力を観察しチェックし続ける行為である。</em></p>
+</blockquote>
+<h2 id="アンチパターン">アンチパターン</h2>
+<ul>
+<li>ツール依存（銀の弾丸はない。</li>
+<li>監視を役割にする (本来監視とはスキルである。)</li>
+<li>チェックボックス監視 (監視しているというチェック)
+<ul>
+<li>メトリクス(CPU使用率、メモリ使用率、システム負荷)を監視しているが、ダウンした理由が不明</li>
+<li>5分以上の間隔でメトリクスを収集</li>
+<li>メトリクスの履歴を保存していない</li>
+</ul>
+</li>
+<li>動いているの定義が曖昧 (自プロダクトの動いている状態とは？どんな状態ですか？)</li>
+<li>動いているかを基準にしないメトリクスのアラート</li>
+<li>手動設定
+<ul>
+<li>監視自体ではなく、監視設定の追加/変更に時間がかかっている。100%自動化すべき</li>
+</ul>
+</li>
+</ul>
+<h2 id="デザインパターン">デザインパターン</h2>
+<blockquote>
+<p>組み合わせ可能な監視の仕組みは、ものりシックな仕組みよりも効果的だよ。</p>
+</blockquote>
+<ul>
+<li>コンポーネント(compasable monitoring)、データ収集(Push, Pull)、メトリクス(Counter, Gauge)</li>
+</ul>
+<blockquote>
+<p>ユーザ視点優先の監視によって、効果的な可視化ができるよ。</p>
+</blockquote>
+<ul>
+<li>HTTPレスポンスエラーコード &gt; インスタンス数</li>
+</ul>
+<blockquote>
+<p>監視の仕組みは、可能な限り自分で作るのではなく購入しよう。</p>
+</blockquote>
+<ul>
+<li>SaaS</li>
+</ul>
+<blockquote>
+<p>常に改善し続けよう。</p>
+</blockquote>
+<ul>
+<li>世界レベルの仕組みは改善してできている。明日にはそうでないかもしれないから。</li>
+</ul>
+<h2 id="アラートオンコールインシデント管理">アラート、オンコール、インシデント管理</h2>
+<blockquote>
+<p>アラート</p>
+</blockquote>
+<ul>
+<li>アラートをメールで送らないようにしよう。(SMS,PagerDutyなどでページャーへ送るようにしよう)</li>
+<li>手順書を書こう。</li>
+<li>全てのアラートがシンプルな閾値で決められるわけではない(使用率ではなく、使用率の増加量を閾値にする)</li>
+<li>メンテナンス期間を使おう。(アラートの停止期間)</li>
+<li>自動復旧を試そう。</li>
+<li>ポストモーテム(検死)をしよう。結果は何かに残して共有しよう。</li>
+</ul>
+<h2 id="統計">統計</h2>
+<ul>
+<li>平均、中央値(データセット)を使おう。</li>
+<li>周期性は、時系列データのパターンの表現方法として使おう。</li>
+<li>パーセンタイルでデータの大部分を把握しよう。</li>
+</ul>
+<h2 id="ビジネス監視">ビジネス監視</h2>
+<ul>
+<li>ビジネスKPIと技術指標の紐付け</li>
+<li>ビジネスKPIの見つけ方
+<ul>
+<li>アプリケーションが動いているかどうやって知ったら良いか？</li>
+<li>それは何をチェックしているか？</li>
+<li>どう動いたら良いのか？</li>
+</ul>
+</li>
+</ul>
+<h2 id="フロントエンド">フロントエンド</h2>
+<ul>
+<li>素早くロードされることが重要である。</li>
+<li>リアルユーザ監視とシンセティック監視(監視に使うトラフィックの種類の違い)がある。</li>
+<li>Navigation Timing API を活用しよう。</li>
+<li>GAにメトリクスデータを送信しよう。</li>
+</ul>
+<h2 id="アプリケーション監視">アプリケーション監視</h2>
+<ul>
+<li>メトリクスとログでアプリケーションを計測することは、パフォーマンスを把握し、トラブルシューティングする能力を高めるために重要なことである。</li>
+<li>/healthエンドポイントパターンは、なかなか良い。</li>
+<li>マイクロサービスの監視は分散トレーシングをやろう。</li>
+</ul>
+<h2 id="サーバ監視">サーバ監視</h2>
+<ul>
+<li>Linuxのメモリ管理では、ディスクの中で最近アクセスされた領域のファイルシステムメタデータはbuffers。ファイルのコンテンツはcachedに保存される。</li>
+<li>OOMKillerのログも確認しておこう。</li>
+<li>ネットワークはイン/アウトのオクテット数、エラー数、ドロップ数を収集しよう。</li>
+<li>ディスクI/O</li>
+<li>ロードアベレージ</li>
+<li>Webサーバでは秒間リクエスト数 (req/sec)。スループットの指標。keepalivesの考慮は必要。</li>
+<li>データベースはIOPSを考慮しよう。</li>
+<li>キャッシュは、追い出されたアイテム数(evicted items)と、ヒット/ミス比率(hit/miss ratio, cache-hit ratio（- メッセージキューは、キューの長さ(queue length)と、消費率(consumption rate（</li>
+<li>メッセージキューは、キューの長さ(ueue length)と、消費率(consumption rate)を監視する。</li>
+</ul>
+<h2 id="ネットワーク監視">ネットワーク監視</h2>
+<ul>
+<li>SNMP(Simple Network Management Protocol)は、ポート161,162を使うUDPベースのプロトコル。ポーリングを161で行い、トラップ(デバイスからのアウトバウンド)は162が使われる。</li>
+<li>帯域幅(bandwidth)、スループット(throughput)、レイテンシ(latency)、エラー(errors)、ジッタ(jitter)</li>
+</ul>
+<h1 id="fyi">FYI</h1>
+<ul>
+<li>コードレベルの監視（APM(Application Performance Management) Toos, プロファイリングツール</li>
+<li>Prometheus</li>
+<li>roll-up（データの間引き設定）</li>
+<li>1つのことを行い、またそれをうまくやるプログラムを書け。協調して動くプログラムを書け。-Doug Mcllroy- ロギングデーモン</li>
+<li>移動平均 (moving average)、信頼区間 (confidence band)、標準偏差 (standard deviation)</li>
+<li>オンコールとは問題が起きたときの担当者のこと</li>
+<li>FTS Follow the Sun</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/pure-doc/categories/sre/>SRE</a><a class="tag" href=/pure-doc/tags/sre/>SRE</a><a class="tag" href=/pure-doc/tags/monitoring/>monitoring</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/pure-doc/post/os_001/"><span class="iconfont icon-article"></span>Unix</a></p><p><a class="link" href="/pure-doc/post/ooda-0001/"><span class="iconfont icon-article"></span>OODA</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2019 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>

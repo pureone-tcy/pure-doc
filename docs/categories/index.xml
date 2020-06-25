@@ -7,27 +7,97 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2019 Notepadium.</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/pure-doc/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>syntax</title>
-      <link>/pure-doc/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>docker</title>
+      <link>/pure-doc/categories/docker/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pure-doc/categories/syntax/</guid>
+      <guid>/pure-doc/categories/docker/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>themes</title>
-      <link>/pure-doc/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>DDD</title>
+      <link>/pure-doc/categories/ddd/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pure-doc/categories/themes/</guid>
+      <guid>/pure-doc/categories/ddd/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SRE</title>
+      <link>/pure-doc/categories/sre/</link>
+      <pubDate>Thu, 09 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/sre/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Basic</title>
+      <link>/pure-doc/categories/basic/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/basic/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>/pure-doc/categories/log/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/log/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>/pure-doc/categories/unix/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/unix/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>OODA</title>
+      <link>/pure-doc/categories/ooda/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/ooda/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/pure-doc/categories/golang/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/golang/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Network</title>
+      <link>/pure-doc/categories/network/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/categories/network/</guid>
       <description></description>
       
     </item>

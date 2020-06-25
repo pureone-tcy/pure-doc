@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>DDD&nbsp;&ndash;&nbsp;pureone doc site</title><link rel="stylesheet" href="/pure-doc/css/core.min.25936def6c216395022d039c1109da843822f2c0aa2dbf735136c58cf2fa166ba4b44cf11d57f01bbf191751cd9bf282.css" integrity="sha384-JZNt72whY5UCLQOcEQnahDgi8sCqLb9zUTbFjPL6FmuktEzxHVfwG78ZF1HNm/KC"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DDD" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/pure-doc/"><span class="site name">pureone doc site</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/pure-doc/categories/">Categories</a><a class="nav item" href="/pure-doc/tags/">Tags</a><a class="nav item" href="/pure-doc/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">100% JavaScript-free</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">DDD</h1><p class="article date">Monday, July 13, 2020</p></section><article class="article markdown-body"><h2 id="ddd">DDD</h2>
+<ul>
+<li>必要なドメインの知識をコードへ落とし込む</li>
+<li>ドメインの知識に焦点をあてた設計手法</li>
+</ul>
+<blockquote>
+<p>ドメイン</p>
+</blockquote>
+<ul>
+<li>ソフトウェアを適用する(プログラム対象の) <em>領域</em> のことであり、ドメインに何かではなく、ドメインに含まれるものは何かが重要</li>
+</ul>
+<blockquote>
+<p>知識に焦点をあてる</p>
+</blockquote>
+<ul>
+<li>ソフトウェアの目的は利用者のドメインにおける問題の解決であり、ドメインに向き合う必要がある。</li>
+</ul>
+<blockquote>
+<p>ドメインモデル</p>
+</blockquote>
+<ul>
+<li>モデルとは、 <em>現実の事象または概念を取捨選択して抽象化した概念</em> であり、ドメインの概念をモデリング（分析）したものがドメインモデル。</li>
+<li>ドメインが変化した場合は、ドメインモデルに伝わり、ドメインオブジェクトへと伝わる</li>
+<li><code>ドメインの概念</code> &lt;&mdash;&gt; <code>ドメインモデル</code> &lt;&mdash;&gt; <code>ドメインオブジェクト</code></li>
+</ul>
+<blockquote>
+<p>まとめ
+アプリケーション実現パターン -&gt; 利用する -&gt; ドメイン知識を表現するパターン</p>
+</blockquote>
+<h2 id="値オブジェクト">値オブジェクト</h2>
+<blockquote>
+<p>等価性によって比較される、交換が可能である、不変である</p>
+</blockquote>
+<blockquote>
+<p>ルールが存在している、単体で取り扱いたい場合は値オブジェクトに含める</p>
+</blockquote>
+<ul>
+<li>氏名は姓と名で構成されるというルール</li>
+</ul>
+<blockquote>
+<p>振る舞いを定義できる</p>
+</blockquote>
+<ul>
+<li>加算のみ定義することで他の演算を排除できる</li>
+</ul>
+<blockquote>
+<p>モチベーション</p>
+</blockquote>
+<ul>
+<li>表現力を増す、不正な値を存在させない、誤った代入を防ぐ、ロジックの散在を防ぐ(DRY)</li>
+</ul>
+<h2 id="エンティティ">エンティティ</h2>
+<blockquote>
+<p>属性ではなく同一性(identity)の実体により区別される、同じ属性でも区別される、可変である</p>
+</blockquote>
+<ul>
+<li>システム上のユーザ情報は、名前が変更されても、年齢を重ねても、メールアドレスを変更しても別のユーザには変化しない</li>
+</ul>
+<blockquote>
+<p>ライフサイクルを持つ場合はエンティティである。</p>
+</blockquote>
+<h2 id="ドメインサービス">ドメインサービス</h2>
+<ul>
+<li>TODO</li>
+</ul>
+<h2 id="リポジトリ">リポジトリ</h2>
+<ul>
+<li>リポジトリの責務はドメインオブジェクトの永続化(保存と復元)や再構築</li>
+</ul>
+<h2 id="memo">MEMO</h2>
+<p>ドメイン知識の表現パターン</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 値オブジェクト</li>
+<li><input checked="" disabled="" type="checkbox"> エンティティ</li>
+<li><input disabled="" type="checkbox"> ドメインサービス</li>
+</ul>
+<p>アプリケーション実現のパターン</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> リポジトリ</li>
+<li><input disabled="" type="checkbox"> アプリケーション</li>
+<li><input disabled="" type="checkbox"> ファクトリ</li>
+</ul>
+<p>ドメイン知識の表現の発展パターン</p>
+<ul>
+<li><input disabled="" type="checkbox"> 集約</li>
+<li><input disabled="" type="checkbox"> 仕様</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/pure-doc/categories/ddd/>DDD</a><a class="tag" href=/pure-doc/tags/ddd/>DDD</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/pure-doc/post/docker_001/"><span class="iconfont icon-article"></span>docker</a></p><p><a class="link" href="/pure-doc/post/gcp_001/"><span class="iconfont icon-article"></span>DDD</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2019 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>

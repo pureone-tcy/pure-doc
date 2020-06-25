@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>monitoring on pureone doc site</title>
+    <link>/pure-doc/tags/monitoring/</link>
+    <description>Recent content in monitoring on pureone doc site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2019 Notepadium.</copyright>
+    <lastBuildDate>Thu, 09 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/pure-doc/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SRE</title>
+      <link>/pure-doc/post/sre_003/</link>
+      <pubDate>Thu, 09 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/sre_003/</guid>
+      <description>SRE Site Reliability Engineering SREはエンジニアであり、システムの信頼性に焦点を置く。 SREとは、ソフトウェアエンジニアチームに運用チームの設計を依頼したときに出</description>
+      
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>/pure-doc/post/sre_004/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/sre_004/</guid>
+      <description>ログとは なんのログが、どんな目的で、どこにあるのか？ どんな形式？、どんなフォーマット？``` プロジェクトの規模と体制と共に予め定義しておく必</description>
+      
+    </item>
+    
+    <item>
+      <title>入門監視</title>
+      <link>/pure-doc/post/sre_001/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/sre_001/</guid>
+      <description>監視とは、あるシステムやそのシステムのコンポーネントの振る舞いや出力を観察しチェックし続ける行為である。 アンチパターン ツール依存（銀の弾丸は</description>
+      
+    </item>
+    
+  </channel>
+</rss>

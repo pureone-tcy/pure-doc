@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Golang&nbsp;&ndash;&nbsp;pureone doc site</title><link rel="stylesheet" href="/pure-doc/css/core.min.25936def6c216395022d039c1109da843822f2c0aa2dbf735136c58cf2fa166ba4b44cf11d57f01bbf191751cd9bf282.css" integrity="sha384-JZNt72whY5UCLQOcEQnahDgi8sCqLb9zUTbFjPL6FmuktEzxHVfwG78ZF1HNm/KC"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Golang" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/pure-doc/"><span class="site name">pureone doc site</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/pure-doc/categories/">Categories</a><a class="nav item" href="/pure-doc/tags/">Tags</a><a class="nav item" href="/pure-doc/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">100% JavaScript-free</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Golang</h1><p class="article date">Thursday, June 25, 2020</p></section><article class="article markdown-body"><h3 id="jsonmashalとjsonnewencoderのベンチマーク">json.Mashalとjson.NewEncoderのベンチマーク</h3>
+<ul>
+<li>Mashalしてバイト配列変換したデータを出力ストリームに書き込む場合と、そのままデータをエンコードする場合のベンチマーク</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">helloWorldHandler1</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">response</span> <span class="o">:=</span> <span class="nx">HelloWorldRespose</span><span class="p">{</span><span class="nx">Message</span><span class="p">:</span> <span class="s">&#34;Hello World!! v2&#34;</span><span class="p">}</span>
+	<span class="nx">data</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="s">&#34;Ooops&#34;</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Fprint</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="nb">string</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">helloWorldHandler2</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">response</span> <span class="o">:=</span> <span class="nx">HelloWorldRespose</span><span class="p">{</span><span class="nx">Message</span><span class="p">:</span> <span class="s">&#34;Hello World!! v3&#34;</span><span class="p">}</span>
+	<span class="nx">encoder</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">NewEncoder</span><span class="p">(</span><span class="nx">w</span><span class="p">)</span>
+	<span class="nx">encoder</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">response</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ go <span class="nb">test</span> -v -run<span class="o">=</span><span class="s2">&#34;none&#34;</span> -bench<span class="o">=</span>. -benchtime<span class="o">=</span><span class="s2">&#34;5s&#34;</span> -benchmem
+</code></pre></div><ul>
+<li>オプションの説明
+<ul>
+<li><a href="https://golang.org/cmd/go/#hdr-Description_of_testing_flags">https://golang.org/cmd/go/#hdr-Description_of_testing_flags</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="arrayとslice">arrayとslice</h3>
+<ul>
+<li>arrayは値であり、sliceは参照である。</li>
+<li>arrayは一定のサイズを持ったデータ構造であり、一定のサイズまで含めた型になる。</li>
+<li>sliceはarrayの実体であるため、sliceを作ったときは、arrayも作成される。</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nx">main</span> <span class="p">{</span>
+  
+  <span class="c1">// slice
+</span><span class="c1"></span>  <span class="nx">a</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+  <span class="nx">b</span> <span class="o">:=</span> <span class="nx">a</span>
+
+  <span class="c1">// 同じアドレス、つまり参照している実体は同じ1つのarrayである。
+</span><span class="c1"></span>  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+
+  <span class="c1">// array
+</span><span class="c1"></span>  <span class="nx">a2</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+  <span class="nx">b2</span> <span class="o">:=</span> <span class="nx">a2</span>
+
+  <span class="c1">// 異なるアドレス、つまり別のメモリ上に別々の実体として存在する。
+</span><span class="c1"></span>  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">a2</span><span class="p">[])</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">b2</span><span class="p">[])</span>
+</code></pre></div><ul>
+<li>take関数の引数はslice型だが、arrayを渡しているため。</li>
+<li>take(s [3]int)であれば引数の型がarrayになるのでコンパイルは通るが、今度はa,bを渡すとエラーになる。</li>
+<li>take(c[:])でarray -&gt; sliceへ変換して渡してあげればOK</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go">  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">take</span><span class="p">(</span><span class="nx">a</span><span class="p">))</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nf">take</span><span class="p">(</span><span class="nx">b</span><span class="p">))</span>
+  <span class="c1">// fmt.Println(take(c)) // エラーになる。
+</span><span class="c1"></span>
+<span class="kd">func</span> <span class="nf">take</span><span class="p">(</span><span class="nx">s</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>sliceに対するslicingは同じarrayを参照する新しいsliceを作る操作である</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go">	<span class="nx">s1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+	<span class="nx">s2</span> <span class="o">:=</span> <span class="nx">s1</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="c1">// [3 4 5]
+</span><span class="c1"></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">s1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">s2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div><ul>
+<li>appendの裏側</li>
+<li><a href="https://blog.golang.org/slices">https://blog.golang.org/slices</a></li>
+<li><a href="https://blog.golang.org/slices#TOC_9">https://blog.golang.org/slices#TOC_9</a>.</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/pure-doc/categories/golang/>Golang</a><a class="tag" href=/pure-doc/tags/golang/>Golang</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/pure-doc/post/ooda-0001/"><span class="iconfont icon-article"></span>OODA</a></p><p><a class="link" href="/pure-doc/post/net_001/"><span class="iconfont icon-article"></span>gRPC</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2019 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>

@@ -7,59 +7,118 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2019 Notepadium.</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/pure-doc/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>/pure-doc/post/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <title>docker</title>
+      <link>/pure-doc/post/docker_001/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pure-doc/post/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Rich Content</title>
-      <link>/pure-doc/post/rich-content/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/pure-doc/post/rich-content/</guid>
-      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;target=&#34;_blank&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;target=&#34;_blank&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+      <guid>/pure-doc/post/docker_001/</guid>
+      <description> </description>
       
     </item>
     
     <item>
-      <title>Placeholder Text</title>
-      <link>/pure-doc/post/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <title>DDD</title>
+      <link>/pure-doc/post/design_001/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pure-doc/post/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
-pectora summo.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Math Typesetting</title>
-      <link>/pure-doc/post/math-typesetting/</link>
-      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/pure-doc/post/math-typesetting/</guid>
-      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+      <guid>/pure-doc/post/design_001/</guid>
+      <description>DDD 必要なドメインの知識をコードへ落とし込む ドメインの知識に焦点をあてた設計手法 ドメイン ソフトウェアを適用する(プログラム対象の) 領域 のことで</description>
       
     </item>
     
     <item>
-      <title>Emoji Support</title>
-      <link>/pure-doc/post/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <title>DDD</title>
+      <link>/pure-doc/post/gcp_001/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/pure-doc/post/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+      <guid>/pure-doc/post/gcp_001/</guid>
+      <description>OSI参照モデル レイヤ1: アプリケーション層 ネットワークサービスの提供(ネットワークの可否判断) レイヤ2: プレゼンテーション層 データ形式の決</description>
+      
+    </item>
+    
+    <item>
+      <title>SRE</title>
+      <link>/pure-doc/post/sre_003/</link>
+      <pubDate>Thu, 09 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/sre_003/</guid>
+      <description>SRE Site Reliability Engineering SREはエンジニアであり、システムの信頼性に焦点を置く。 SREとは、ソフトウェアエンジニアチームに運用チームの設計を依頼したときに出</description>
+      
+    </item>
+    
+    <item>
+      <title>Computer Basics</title>
+      <link>/pure-doc/post/cp_001/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/cp_001/</guid>
+      <description>データ構造 リスト 配列 ツリー ハッシュ スタックキュー 計算量 入力サイズ chat, etc notification(default) LBの設定(app engine)</description>
+      
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>/pure-doc/post/sre_004/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/sre_004/</guid>
+      <description>ログとは なんのログが、どんな目的で、どこにあるのか？ どんな形式？、どんなフォーマット？``` プロジェクトの規模と体制と共に予め定義しておく必</description>
+      
+    </item>
+    
+    <item>
+      <title>Unix</title>
+      <link>/pure-doc/post/os_001/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/os_001/</guid>
+      <description>pager more, less コマンド</description>
+      
+    </item>
+    
+    <item>
+      <title>入門監視</title>
+      <link>/pure-doc/post/sre_001/</link>
+      <pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/sre_001/</guid>
+      <description>監視とは、あるシステムやそのシステムのコンポーネントの振る舞いや出力を観察しチェックし続ける行為である。 アンチパターン ツール依存（銀の弾丸は</description>
+      
+    </item>
+    
+    <item>
+      <title>OODA</title>
+      <link>/pure-doc/post/ooda-0001/</link>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/ooda-0001/</guid>
+      <description>孫子の兵法 キングダム。 戦略を正しく理解している将軍は「確実に勝つ」と主張。しかし、直接攻撃する戦争の一般的手法の多くはビジネスでは役立たない</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/pure-doc/post/go_001/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/go_001/</guid>
+      <description>json.Mashalとjson.NewEncoderのベンチマーク Mashalしてバイト配列変換したデータを出力ストリームに書き込む場合と</description>
+      
+    </item>
+    
+    <item>
+      <title>gRPC</title>
+      <link>/pure-doc/post/net_001/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/pure-doc/post/net_001/</guid>
+      <description>gRPC HTTP/2 を利用した RPCフレームワーク Protocol Buffers を利用し、データをシリアライズして高速なRPCを実現 RPC Remote Procedure Call ローカル関数の呼び出しと同じようにリモート</description>
       
     </item>
     

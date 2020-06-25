@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>log&nbsp;&ndash;&nbsp;pureone doc site</title><link rel="stylesheet" href="/pure-doc/css/core.min.25936def6c216395022d039c1109da843822f2c0aa2dbf735136c58cf2fa166ba4b44cf11d57f01bbf191751cd9bf282.css" integrity="sha384-JZNt72whY5UCLQOcEQnahDgi8sCqLb9zUTbFjPL6FmuktEzxHVfwG78ZF1HNm/KC"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="log" /><body><section id="header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/pure-doc/"><span class="site name">pureone doc site</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/pure-doc/categories/">Categories</a><a class="nav item" href="/pure-doc/tags/">Tags</a><a class="nav item" href="/pure-doc/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">100% JavaScript-free</span></div></section><section id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">log</h1><p class="article date">Monday, July 6, 2020</p></section><article class="article markdown-body"><h1 id="ログとは">ログとは</h1>
+<ul>
+<li>
+<p>なんのログが、どんな目的で、どこにあるのか？</p>
+<ul>
+<li>どんな形式？、どんなフォーマット？```</li>
+</ul>
+</li>
+<li>
+<p>プロジェクトの規模と体制と共に予め定義しておく必要がある</p>
+</li>
+<li>
+<p>推測するな　計測せよ by Unix哲学(Wiki)</p>
+</li>
+</ul>
+<blockquote>
+<p>分類</p>
+</blockquote>
+<ul>
+<li>アプリケーションログ</li>
+<li>パケットキャプチャ</li>
+<li>メモリダンプ, etc&hellip;</li>
+</ul>
+<blockquote>
+<p>目的</p>
+</blockquote>
+<ul>
+<li>障害対応</li>
+<li>セキュリティインシデント</li>
+<li>プログラムデバック</li>
+<li>復旧, etc&hellip;</li>
+</ul>
+<blockquote>
+<p>フィルター</p>
+</blockquote>
+<ul>
+<li>FACILITY (syslog, cron, ftp, auth&hellip;)</li>
+<li>PRIORITY (Debug, Inof, Warn&hellip;)</li>
+</ul>
+<blockquote>
+<p>形式(フォーマット)</p>
+</blockquote>
+<ul>
+<li>テキスト(anaconda.log, secure, audit.log&hellip;)</li>
+<li>バイナリ(Lastlog, utmp, wtmp&hellip;)</li>
+</ul>
+<h1 id="パフォーマンスチューニング">パフォーマンスチューニング</h1>
+<ul>
+<li>レスポンスタイムと内容の計測結果を元に、ボトルネックを調査する</li>
+</ul>
+<h1 id="ref">ref</h1>
+<ul>
+<li>トリアージ: 優先順位づけ</li>
+<li>ケルベロス認証</li>
+<li>INFOレベルのログの多さでハックを気づく</li>
+<li>APM (Application Performace Monitroring)</li>
+<li>linux /var/log 配下のログがどういう出方をしているのか？ログがどういう風に出るのか？</li>
+</ul>
+</article><section class="article labels"><a class="category" href=/pure-doc/categories/log/>log</a><a class="tag" href=/pure-doc/tags/ops/>ops</a><a class="tag" href=/pure-doc/tags/monitoring/>monitoring</a><a class="tag" href=/pure-doc/tags/log/>log</a></section></div>
+<div class="article bottom"><section class="article navigation"><p><a class="link" href="/pure-doc/post/cp_001/"><span class="iconfont icon-article"></span>Computer Basics</a></p><p><a class="link" href="/pure-doc/post/os_001/"><span class="iconfont icon-article"></span>Unix</a></p></section></div></section><section id="footer"><div class="footer-wrap">
+    <p class="copyright">©2019 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p></div></section><script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-e/4/LvThKH1gwzXhdbY2AsjR3rm7LHWyhIG5C0jiRfn8AN2eTN5ILeztWw0H9jmN" crossorigin="anonymous"></script>
+        <script
+            type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script></body>
+
+</html>
